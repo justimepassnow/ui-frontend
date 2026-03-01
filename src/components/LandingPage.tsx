@@ -154,7 +154,7 @@ const Scene = () => {
       <FallingPaper />
       
       {/* Border Drop: 3/9 to 5/9 */}
-      <FallingLayer startScroll={3/9} endScroll={5/9} yOffset={0.01}>
+      <FallingLayer startScroll={3/8} endScroll={5/8} yOffset={0.01}>
         <mesh position={[0, 0, 0]}>
           <planeGeometry args={[PAPER_WIDTH - 0.4, PAPER_HEIGHT - 0.4]} />
           <meshStandardMaterial color="#333333" transparent opacity={0.1} wireframe />
@@ -162,7 +162,7 @@ const Scene = () => {
       </FallingLayer>
 
       {/* Name Drop: 5/9 to 7/9 */}
-      <FallingLayer startScroll={5/9} endScroll={7/9} yOffset={0.02}>
+      <FallingLayer startScroll={5/8} endScroll={7/8} yOffset={0.02}>
         <Text
           position={[0, 1.0, 0]}
           fontSize={0.4}
@@ -184,7 +184,7 @@ const Scene = () => {
       </FallingLayer>
 
       {/* Details Drop: 7/9 to 9/9 */}
-      <FallingLayer startScroll={7/9} endScroll={9/9} yOffset={0.03}>
+      <FallingLayer startScroll={7/8} endScroll={8/8} yOffset={0.03}>
         <Text
           position={[0, -1.0, 0]}
           fontSize={0.15}
@@ -208,10 +208,10 @@ const LandingPage: React.FC = () => {
     <div style={{ width: '100vw', height: '100vh', background: 'var(--bg-color)', position: 'relative' }}>
       <Canvas 
         shadows 
-        camera={{ position: [10, 10, 10], fov: 35 }}
+        camera={{ position: [10, 10, 20], fov: 50 }}
         onCreated={({ camera }) => camera.lookAt(0, 0, 0)}
       >
-        <ScrollControls pages={9} damping={0.1}>
+        <ScrollControls pages={8} damping={0.1}>
           <Scene />
         </ScrollControls>
       </Canvas>
