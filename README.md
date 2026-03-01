@@ -18,7 +18,7 @@ A React-based frontend application designed for event coordinators to submit eve
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/justimepassnow/ui-frontend
     cd ui-frontend
     ```
 
