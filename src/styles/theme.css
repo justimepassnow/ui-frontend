@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Colors from PRD */
+  --bg-color: #F3F4F6;
+  --surface-color: #FDE68A;
+  --primary-action: #4F46E5;
+  --accent-color: #FB7185;
+  --text-primary: #2B2D42;
+  
+  /* Additional UI Variables */
+  --white: #FFFFFF;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius: 12px;
+  --transition-bouncy: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  perspective: 2000px; /* Enhanced 3D depth */
+  overflow-x: hidden;
+}
+
+.desk {
+  transform-style: preserve-3d;
+}
+
+.section-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.mode-content {
+  backface-visibility: hidden;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Animation Classes */
+.bouncy-hover:hover {
+  transform: scale(1.02);
+}
+
+.bouncy-click:active {
+  transform: scale(0.95);
+}
+
+.paper-fold-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+
+.paper-piece {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.05);
+  transform-origin: center;
+}
+
+.success-checkmark {
+  font-size: 5rem;
+  color: var(--primary-action);
+  opacity: 0;
+}
+
+.airplane-container {
+  position: absolute;
+  font-size: 3rem;
+  display: none;
+}
