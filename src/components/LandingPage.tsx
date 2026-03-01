@@ -179,7 +179,7 @@ const Scene = () => {
           anchorX="center"
           anchorY="middle"
         >
-          John Doe
+          Akshay Kumar 
         </Text>
       </FallingLayer>
 
@@ -194,8 +194,7 @@ const Scene = () => {
           anchorX="center"
           anchorY="middle"
         >
-          For outstanding dedication, passion, and excellence in Event Coordination. 
-          Your contributions have been invaluable.
+          For Excelence in Event Coordination
         </Text>
       </FallingLayer>
       
